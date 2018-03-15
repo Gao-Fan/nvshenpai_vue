@@ -13,7 +13,12 @@ var router = new Router({
     {
       path: '/home',
       name: 'Home',
-      component: ()=>import('@/components/Home')
+      component: ()=>import('@/components/Home'),
+    },
+    {
+          path: '/product/:fid',
+          name: 'Product',
+          component: ()=>import('@/components/Product')
     },
     {
       path: '/special',
@@ -29,12 +34,13 @@ var router = new Router({
       path: '/showphoto',
       name: 'ShowPhoto',
       component: ()=>import('@/components/ShowPhoto')
-    },
-    {
-      path: '/product/:fid',
-      name: 'Product',
-      component: ()=>import('@/components/Product')
     }
+    // ,
+    // {
+    //   path: '/product/:fid',
+    //   name: 'Product',
+    //   component: ()=>import('@/components/Product')
+    // }
   ]
 })
 

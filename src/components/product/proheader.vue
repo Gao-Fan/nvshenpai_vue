@@ -2,7 +2,11 @@
 	<div class='toptop'>
 		<div class="box" v-if='brand'>
 			<div class='left'>
+<<<<<<< HEAD
 				<router-link to='#'>
+=======
+				<router-link to='javascript:;' @click.native='backprev()'>
+>>>>>>> vue_gad
 					<img src="../../assets/img/左箭头.svg" alt="">
 				</router-link>
 			</div>
@@ -27,6 +31,19 @@ export default{
 	props:['brand'],
 	updated(){
 		//console.log(this.brand)
+<<<<<<< HEAD
+=======
+	},
+	
+	methods:{
+		backprev:function(){
+			//console.log('1')
+			// window.history.go(-1)  不好用
+			//window.history.back();  不好用
+			//window.history.back();location.reload();
+			window.location.href = "http://localhost:8080/#/home";
+		}
+>>>>>>> vue_gad
 	}
 } 
 
