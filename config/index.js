@@ -11,22 +11,14 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-        '/product':{
-            target:"http://api.v2.msparis.com",
-            changeOrigin:true
-        },
-        '/home':{
-            target:"http://api.v2.msparis.com",
-            changeOrigin:true
-        },
-        '/brand':{
-            target:"http://api.v2.msparis.com",
-            changeOrigin:true
-        },
-        '/find':{
-            target:"http://api.v2.msparis.com",
-            changeOrigin:true
-        }
+    	"/product":{
+    		target:"http://api.v2.msparis.com",
+    		changeOrigin:true
+    	},
+    	"/mall":{
+    		target:"http://api.v2.msparis.com",
+    		changeOrigin:true
+    	}
     },
 
     // Various Dev Server settings

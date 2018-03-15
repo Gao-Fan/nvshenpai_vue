@@ -1,45 +1,26 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-
+import Shop from '@/components/Shop'
+import Carefree from '@/components/Carefree'
+import Mine from '@/components/Mine'
 Vue.use(Router)
 
-var router = new Router({
+export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'HelloWorld',
-      component: ()=>import('@/components/HelloWorld')
+      path: '/Shop',
+      name: 'Shop',
+      component: Shop
     },
     {
-      path: '/home',
-      name: 'Home',
-      component: ()=>import('@/components/Home')
+      path: '/Carefree',
+      name: 'Carefree',
+      component: Carefree
     },
     {
-      path: '/special',
-      name: 'Special',
-      component: ()=>import('@/components/Special')
-    },
-    {
-      path: '/trademark',
-      name: 'TradeMark',
-      component: ()=>import('@/components/TradeMark')
-    },
-    {
-      path: '/showphoto',
-      name: 'ShowPhoto',
-      component: ()=>import('@/components/ShowPhoto')
-    },
-    {
-      path: '/product/:fid',
-      name: 'Product',
-      component: ()=>import('@/components/Product')
+    	path: '/Mine',
+      name: 'Mine',
+      component: Mine
     }
   ]
 })
-
-router.beforeEach( (to,from,next)=>{
-	next()
-})
-
-export default router
