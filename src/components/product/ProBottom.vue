@@ -4,7 +4,7 @@
     	❤
     </div>
 
-    <div class="middle">
+    
 
     <div class="middle" @click='addshop'>
 
@@ -19,11 +19,7 @@
 <script>
   import axios from 'axios'
 
-export default {
-  name: 'ProBottom',
-  props:['part_message']
-
-  import { Toast } from 'mint-ui';
+ import { Toast } from 'mint-ui';
 export default {
   name: 'ProBottom',
   props:['part_message'],

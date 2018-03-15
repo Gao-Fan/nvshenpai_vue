@@ -26,11 +26,11 @@
 				</span>
 	    	</div>
 	    	<div class='size row'>
-<<<<<<< HEAD
-				<span v-for='item in part_message.specifications'>
-=======
+
+				
+
 				<span v-for='item in part_message.specifications'  @click='change($event)'>
->>>>>>> vue_gad
+
 					<span v-for='msg in item.options'>
 						{{item.name}}{{msg.name}}
 					</span>
@@ -65,10 +65,10 @@
 				>
 			</div>
 		</div>
-<<<<<<< HEAD
-		Part
-=======
->>>>>>> vue_gad
+
+
+
+
 	</div>
   	
    		
@@ -76,26 +76,26 @@
 
 <script>
 import axios from 'axios'
-<<<<<<< HEAD
-=======
+
+
 import Vue from 'vue'
 
 var bus = new Vue()
->>>>>>> vue_gad
+
 export default {
   name: 'Part',
   props:['part_message'],
   updated(){
   	//console.log(this.part_message)
-<<<<<<< HEAD
-=======
+
+
   },
   methods:{
   	change:function(event){
   		console.log( event.target.innerHTML.replace(/ /g,''))
   		bus.$emit("comsg",event.target.innerHTML)
   	}
->>>>>>> vue_gad
+
   }
 }
 </script>
@@ -111,14 +111,14 @@ export default {
 		height: .533333rem;
 	}
 	.brand{
-<<<<<<< HEAD
+
 		
-=======
+
 		width: 10rem;
 		padding: .266667rem .533333rem;
 		margin: 0 auto;
 		position: relative;
->>>>>>> vue_gad
+
 		padding-bottom: 1.466667rem;
 		overflow: hidden;
 	}
@@ -162,15 +162,8 @@ export default {
 		padding-top: .266667rem;
 		position: relative;
 	}
-<<<<<<< HEAD
-	.size span:nth-child(odd){
-		background: #333;
-		color: #fff;
-	}
-	.size span:nth-child(even){
-=======
 	.size span{
->>>>>>> vue_gad
+
 		background: #eee;
 		color: #333;
 	}
@@ -182,10 +175,10 @@ export default {
 		text-align: center;
 		line-height: .933333rem;
 		margin-right: .3333333rem;
-<<<<<<< HEAD
-=======
 
->>>>>>> vue_gad
+
+
+
 	}
 	.size{
 		width: 100%;
@@ -206,11 +199,9 @@ export default {
 	.tags span{
 		color: #f5359b;
 		font-size: .293333rem;
-<<<<<<< HEAD
 		margin-right: .2rem;
-=======
+
 		margin-right: .1rem;
->>>>>>> vue_gad
 	}
 	.tags{
 		width: 100%;
