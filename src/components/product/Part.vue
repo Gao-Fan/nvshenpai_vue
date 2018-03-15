@@ -26,7 +26,7 @@
 				</span>
 	    	</div>
 	    	<div class='size row'>
-				<span v-for='item in part_message.specifications'>
+				<span v-for='item in part_message.specifications'  @click='change($event)'>
 					<span v-for='msg in item.options'>
 						{{item.name}}{{msg.name}}
 					</span>
@@ -68,11 +68,20 @@
 
 <script>
 import axios from 'axios'
+import Vue from 'vue'
+
+var bus = new Vue()
 export default {
   name: 'Part',
   props:['part_message'],
   updated(){
   	//console.log(this.part_message)
+  },
+  methods:{
+  	change:function(event){
+  		console.log( event.target.innerHTML.replace(/ /g,''))
+  		bus.$emit("comsg",event.target.innerHTML)
+  	}
   }
 }
 </script>
@@ -135,11 +144,7 @@ export default {
 		padding-top: .266667rem;
 		position: relative;
 	}
-	.size span:nth-child(odd){
-		background: #333;
-		color: #fff;
-	}
-	.size span:nth-child(even){
+	.size span{
 		background: #eee;
 		color: #333;
 	}

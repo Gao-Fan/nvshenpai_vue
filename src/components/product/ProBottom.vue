@@ -3,7 +3,7 @@
     <div class="left">
     	❤
     </div>
-    <div class="middle">
+    <div class="middle" @click='addshop'>
     	加入衣袋
     </div>
     <div class="right">
@@ -14,9 +14,24 @@
 
 <script>
   import axios from 'axios'
+  import { Toast } from 'mint-ui';
 export default {
   name: 'ProBottom',
-  props:['part_message']
+  props:['part_message'],
+  updated(){
+  	
+  },
+  methods:{
+  	addshop(){
+		Toast({
+	 		message: '添加成功',
+	  		position: 'middle',
+	  		duration: 3000
+		});
+		this.$store.dispatch('addshopA',this.part_message)
+		console.log(this.$store.state.buyshops)
+  	}
+  }
 }
 </script>
 
