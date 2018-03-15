@@ -151,6 +151,7 @@ export default {
 		text-align: center;
 		line-height: .933333rem;
 		margin-right: .3333333rem;
+
 	}
 	.size{
 		width: 100%;
@@ -171,7 +172,7 @@ export default {
 	.tags span{
 		color: #f5359b;
 		font-size: .293333rem;
-		margin-right: .2rem;
+		margin-right: .1rem;
 	}
 	.tags{
 		width: 100%;

@@ -2,7 +2,7 @@
 	<div class='toptop'>
 		<div class="box" v-if='brand'>
 			<div class='left'>
-				<router-link to='#'>
+				<router-link to='/home'>
 					<img src="../../assets/img/左箭头.svg" alt="">
 				</router-link>
 			</div>
