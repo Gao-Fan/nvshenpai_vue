@@ -1,4 +1,4 @@
-# goddess-p
+# goddess
 
 > A Vue.js project
 
