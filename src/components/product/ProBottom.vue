@@ -18,6 +18,7 @@
 
 <script>
   import axios from 'axios'
+  import $ from 'jquery'
 
  import { Toast } from 'mint-ui';
 export default {
@@ -33,8 +34,19 @@ export default {
 	  		position: 'middle',
 	  		duration: 3000
 		});
-		this.$store.dispatch('addshopA',this.part_message)
-		console.log(this.$store.state.buyshops)
+		// this.$store.dispatch('addshopA',this.part_message)
+		// console.log(this.$store.state.buyshops)
+		$.ajax({
+			url:'/api/addshop',
+			type:'get',
+			data:{
+				xxx:123
+			},
+			success:function(res){
+				
+			}
+
+		}) 
   	}
   }
 

@@ -16,9 +16,9 @@ var router = new Router({
       component: ()=>import('@/components/Home'),
     },
     {
-          path: '/product/:fid',
-          name: 'Product',
-          component: ()=>import('@/components/Product')
+      path: '/product/:fid',
+      name: 'Product',
+      component: ()=>import('@/components/Product')
     },
     {
       path: '/special',
