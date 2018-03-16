@@ -8,7 +8,7 @@
     <BottomBanner :bottom_banner_list='bottom_banner_list'></BottomBanner>
     <Footer></Footer>
    </div>
-   <!-- cehi -->
+   <!-- ceshi -->
 </template>
 
 <script>
