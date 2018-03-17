@@ -27,7 +27,7 @@ module.exports = {
             target:"http://api.v2.msparis.com",
             changeOrigin:true
         },
-        '/api':{
+        '/ShopCar':{
             target:"http://localhost:3000",
             changeOrigin:true
         }

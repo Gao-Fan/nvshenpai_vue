@@ -37,13 +37,13 @@ export default {
 		// this.$store.dispatch('addshopA',this.part_message)
 		// console.log(this.$store.state.buyshops)
 		$.ajax({
-			url:'/api/addshop',
+			url:'/ShopCar',
 			type:'get',
 			data:{
 				xxx:123
 			},
 			success:function(res){
-				
+				console.log(res)
 			}
 
 		}) 
