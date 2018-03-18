@@ -11,6 +11,7 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
+<<<<<<< HEAD
         '/product':{
             target:"http://api.v2.msparis.com",
             changeOrigin:true
@@ -31,6 +32,16 @@ module.exports = {
             target:"http://localhost:3000",
             changeOrigin:true
         }
+=======
+    	"/product":{
+    		target:"http://api.v2.msparis.com",
+    		changeOrigin:true
+    	},
+    	"/mall":{
+    		target:"http://api.v2.msparis.com",
+    		changeOrigin:true
+    	}
+>>>>>>> d315cfa9a0fd55bc0c3eb239c2c547f46f1e3c4a
     },
 
     // Various Dev Server settings
