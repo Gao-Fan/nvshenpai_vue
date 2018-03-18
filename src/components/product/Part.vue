@@ -26,11 +26,7 @@
 				</span>
 	    	</div>
 	    	<div class='size row'>
-
-				
-
 				<span v-for='item in part_message.specifications'  @click='change($event)'>
-
 					<span v-for='msg in item.options'>
 						{{item.name}}{{msg.name}}
 					</span>
@@ -65,10 +61,6 @@
 				>
 			</div>
 		</div>
-
-
-
-
 	</div>
   	
    		
@@ -76,26 +68,20 @@
 
 <script>
 import axios from 'axios'
-
-
 import Vue from 'vue'
 
 var bus = new Vue()
-
 export default {
   name: 'Part',
   props:['part_message'],
   updated(){
   	//console.log(this.part_message)
-
-
   },
   methods:{
   	change:function(event){
   		console.log( event.target.innerHTML.replace(/ /g,''))
   		bus.$emit("comsg",event.target.innerHTML)
   	}
-
   }
 }
 </script>
@@ -111,14 +97,10 @@ export default {
 		height: .533333rem;
 	}
 	.brand{
-
-		
-
 		width: 10rem;
 		padding: .266667rem .533333rem;
 		margin: 0 auto;
 		position: relative;
-
 		padding-bottom: 1.466667rem;
 		overflow: hidden;
 	}
@@ -163,7 +145,6 @@ export default {
 		position: relative;
 	}
 	.size span{
-
 		background: #eee;
 		color: #333;
 	}
@@ -175,9 +156,6 @@ export default {
 		text-align: center;
 		line-height: .933333rem;
 		margin-right: .3333333rem;
-
-
-
 
 	}
 	.size{
@@ -199,8 +177,6 @@ export default {
 	.tags span{
 		color: #f5359b;
 		font-size: .293333rem;
-		margin-right: .2rem;
-
 		margin-right: .1rem;
 	}
 	.tags{

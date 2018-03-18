@@ -2,10 +2,8 @@
 	<div class='toptop'>
 		<div class="box" v-if='brand'>
 			<div class='left'>
-
-
-				<router-link to='#' @click.native='backprev()'>
-					<img src="../../assets/img/leftarrow.svg" alt="">
+				<router-link to='javascript:;' @click.native='backprev()'>
+					<img src="../../assets/img/左箭头.svg" alt="">
 				</router-link>
 			</div>
 			<div class='middle'>
@@ -29,7 +27,6 @@ export default{
 	props:['brand'],
 	updated(){
 		//console.log(this.brand)
-
 	},
 	
 	methods:{
@@ -40,12 +37,10 @@ export default{
 			//window.history.back();location.reload();
 			window.location.href = "http://localhost:8080/#/home";
 		}
-
 	}
 } 
 
 </script>
-
 <style scoped>
 	.toptop{
 		position: sticky;

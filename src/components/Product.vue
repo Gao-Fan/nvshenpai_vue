@@ -22,10 +22,10 @@ var bus = new Vue();
 export default {
   name: 'Product',
   components:{
-	ProHeader,
-	Photo,
-	Part,
-	ProBottom
+  	ProHeader,
+  	Photo,
+  	Part,
+  	ProBottom
   },
   data(){
     return{
@@ -43,12 +43,18 @@ export default {
     // })
   },
   updated(){
-
+    bus.$on("comsg",function(msg){
+      this.shoptype = msg
+      console.log(msg)
+    })
   },
   mounted(){  	
   	this.fid = this.$route.params.fid
   	//console.log(this.fid)
-
+    bus.$on("comsg",function(msg){
+      this.shoptype = msg
+      console.log(msg)
+    })
   	axios.get("/product?platform=wap&channel=BDPZ_100051&access_token=&city=&id="+this.fid+"&only_specifications=&use_limit_days=&date=")
   		 .then( (res)=>{
   		 	//console.log(res)
@@ -63,5 +69,4 @@ export default {
 }
 </script>
 <style scoped>
-
 </style>

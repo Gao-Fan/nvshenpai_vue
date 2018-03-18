@@ -1,6 +1,6 @@
 <template>
   <div id="box">
-    <router-link to="/" active-class='active' exact>
+    <router-link to="#" class='active'>
     	<span>
     		<i class="iconfont icon-home"></i>
     	</span>
@@ -18,7 +18,7 @@
     	</span>
     	<p>新衣无忧购</p>
     </router-link>
-    <router-link to="/shopcar" active-class='active'>
+    <router-link to="#">
     	<span>
     		<i class="iconfont icon-shoutibao"></i>
     	</span>

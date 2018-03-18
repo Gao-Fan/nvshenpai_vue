@@ -1,61 +1,37 @@
 <template>
-	<div class='bottom' v-if='part_message'>
-	    <div class="left">
-	    	❤
-	    </div>
-	    <div class="middle" @click='addshop'>
-	    	加入衣袋
-	    </div>
-	    <div class="right">
-	    	立即购买
-	    </div>
+  <div class='bottom'>
+    <div class="left">
+    	❤
+    </div>
+    <div class="middle" @click='addshop'>
+    	加入衣袋
+    </div>
+    <div class="right">
+    	立即购买
+    </div>
    </div>
 </template>
 
 <script>
   import axios from 'axios'
-  import $ from 'jquery'
-
- import { Toast } from 'mint-ui';
+  import { Toast } from 'mint-ui';
 export default {
   name: 'ProBottom',
   props:['part_message'],
-  mounted(){
-  	console.log(this.part_message)
-  },
   updated(){
-  	console.log(this.part_message)
+  	
   },
   methods:{
   	addshop(){
-		axios.post('/shopcar',{
-			brand:this.part_message.brand,
-			images:this.part_message.image[0],
-			name:this.part_message.name,
-			origin_sale_price:this.part_message.market_price,
-			product_id:this.part_message.id,
-			sale_price:this.part_message.sale_price,
-			specification_name:"伪数据S",
-			spu:this.part_message.spu
-		})
-			 .then( (res)=>{
-			 	if(res.data.status == 1){
-			 		Toast({
-				 		message: '添加购物车成功',
-				  		position: 'middle',
-				  		duration: 3000
-					});
-			 	}else{
-			 		Toast({
-				 		message: '购物车已经有此件商品',
-				  		position: 'middle',
-				  		duration: 3000
-					});
-			 	}
-			 })
+		Toast({
+	 		message: '添加成功',
+	  		position: 'middle',
+	  		duration: 3000
+		});
+		this.$store.dispatch('addshopA',this.part_message)
+		console.log(this.$store.state.buyshops)
   	}
   }
-
 }
 </script>
 
