@@ -5,6 +5,23 @@ Vue.use(Router)
 
 var router = new Router({
   routes: [
+  // 下边作者耿劲腾
+    {
+      path: '/Shop',
+      name: 'Shop',
+      component: ()=>import('@/components/Shop')
+    },
+    {
+      path: '/Carefree',
+      name: 'Carefree',
+      component: ()=>import('@/components/Carefree')
+    },
+    {
+      path: '/Mine',
+      name: 'Mine',
+      component: ()=>import('@/components/Mine')
+    },
+    // 上边作者耿劲腾
     {
       path: '/',
       name: 'Home',

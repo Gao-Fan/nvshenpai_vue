@@ -11,6 +11,10 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
+        "/mall":{
+            target:"http://api.v2.msparis.com",
+            changeOrigin:true
+        },
         '/product':{
             target:"http://api.v2.msparis.com",
             changeOrigin:true

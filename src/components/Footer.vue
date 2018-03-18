@@ -6,13 +6,13 @@
     	</span>
     	<p>首页</p>
     </router-link>
-    <router-link to="#">
+    <router-link to="Shop" active-class='active' exact>
     	<span>
     		<i class="iconfont icon-yifu"></i>
     	</span>
     	<p>租衣</p>
     </router-link>
-    <router-link to="#">
+    <router-link to="/Carefree" active-class='active'>
     	<span>
     		<i class="iconfont wuyougou icon-fuhao-shangdian"></i>
     	</span>
@@ -24,7 +24,7 @@
     	</span>
     	<p>衣袋</p>
     </router-link>
-     <router-link to="#">
+     <router-link to="/Mine" active-class='active'>
     	<span>
     		<i class="iconfont icon-wode"></i>
     	</span>
