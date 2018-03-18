@@ -26,6 +26,10 @@ module.exports = {
         '/find':{
             target:"http://api.v2.msparis.com",
             changeOrigin:true
+        },
+        '/shopcar':{
+            target:"http://localhost:3000",
+            changeOrigin:true
         }
     },
 

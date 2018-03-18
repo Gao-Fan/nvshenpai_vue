@@ -67,8 +67,8 @@ export default {
   methods:{
   	countMoney(){
 		this.money = 0;
-		alert("countMoney计算金额中现在的初始化金额为"+this.money)
-		alert("被选中的商品数"+$('img[status=on]').length)
+		//alert("countMoney计算金额中现在的初始化金额为"+this.money)
+		//alert("被选中的商品数"+$('img[status=on]').length)
 		for( var i = 0 ; i < $('img[status=on]').length ; i++ ){
 			var money = $('img[status=on]').eq(i).parent().parent().find(".rent").html()
 			money = money.replace(/¥/,'')
@@ -83,7 +83,7 @@ export default {
   		}else{
   			$(event.target).attr('src',this.off)
   			$(event.target).attr('status','off')
-  			alert("取消选中")
+  			//alert("取消选中")
   			this.countMoney()
   		}
   	},
@@ -91,17 +91,14 @@ export default {
   		var product_id = event.target.getAttribute('fid')
   		var status = $(event.target).parent().parent().find('.check').find('img').attr('status')
   		if(confirm("确认删除吗")){
+  			this.money = 0;
 			axios.post('/shopcar/removeshop',{product_id:product_id})
   		     	.then( (res)=>{
   		     		console.log(this.docs)
   		     		if( res.data.status == -704){
-  		     			this.docs = false;
-  		     			this.countMoney()
+  		     			this.docs = '';
   		     		}else{
-  		     			alert("进行删除,现在的总金额"+this.money)
-  		     			this.docs = res.data
-  		     			// alert("这是删除里的被选中的商品数"+$('img[status=on]').length)
-  	     				// this.countMoney()
+  		     			this.docs = res.data;
   		     	}
   		     })
   		}

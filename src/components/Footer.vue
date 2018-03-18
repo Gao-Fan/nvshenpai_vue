@@ -1,10 +1,10 @@
 <template>
   <div id="box">
-    <router-link to="#" class='active'>
+    <router-link to="/" active-class='active' exact>
     	<span>
     		<i class="iconfont icon-home"></i>
     	</span>
-    	<p>首页ii</p>
+    	<p>首页</p>
     </router-link>
     <router-link to="#">
     	<span>
@@ -18,7 +18,7 @@
     	</span>
     	<p>新衣无忧购</p>
     </router-link>
-    <router-link to="#">
+    <router-link to="/shopcar" active-class='active'>
     	<span>
     		<i class="iconfont icon-shoutibao"></i>
     	</span>
