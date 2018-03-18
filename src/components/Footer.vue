@@ -4,7 +4,7 @@
     	<span>
     		<i class="iconfont icon-home"></i>
     	</span>
-    	<p>首页</p>
+    	<p>首页ii</p>
     </router-link>
     <router-link to="#">
     	<span>

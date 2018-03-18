@@ -8,6 +8,7 @@
     <BottomBanner :bottom_banner_list='bottom_banner_list'></BottomBanner>
     <Footer></Footer>
    </div>
+   <!-- ceshi -->
 </template>
 
 <script>
