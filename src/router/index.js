@@ -7,8 +7,8 @@ var router = new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: ()=>import('@/components/HelloWorld')
+      name: 'Home',
+      component: ()=>import('@/components/Home')
     },
     {
       path: '/home',
@@ -34,13 +34,12 @@ var router = new Router({
       path: '/showphoto',
       name: 'ShowPhoto',
       component: ()=>import('@/components/ShowPhoto')
+    },
+    {
+      path: '/shopcar',
+      name: 'ShopCar',
+      component: ()=>import('@/components/ShopCar')
     }
-    // ,
-    // {
-    //   path: '/product/:fid',
-    //   name: 'Product',
-    //   component: ()=>import('@/components/Product')
-    // }
   ]
 })
 

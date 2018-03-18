@@ -1,10 +1,5 @@
 <template>
 	<div>
-		<!-- <ProHeader :brand='brand'></ProHeader> -->
-		<!-- <Photo :photos='photos'></Photo>
-		<Part :part_message='part_message'></Part>
-		<ProBottom :part_message='part_message'></ProBottom> -->
-		<!-- 购物按钮 -->
 		<ProHeader :brand='brand'></ProHeader>
 		<Photo :photos='photos'></Photo>
 		<Part :part_message='part_message'></Part>
@@ -48,18 +43,11 @@ export default {
     // })
   },
   updated(){
-    bus.$on("comsg",function(msg){
-      this.shoptype = msg
-      console.log(msg)
-    })
+
   },
   mounted(){  	
   	this.fid = this.$route.params.fid
   	//console.log(this.fid)
-    bus.$on("comsg",function(msg){
-      this.shoptype = msg
-      console.log(msg)
-    })
 
   	axios.get("/product?platform=wap&channel=BDPZ_100051&access_token=&city=&id="+this.fid+"&only_specifications=&use_limit_days=&date=")
   		 .then( (res)=>{

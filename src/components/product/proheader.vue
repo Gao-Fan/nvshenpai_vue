@@ -5,8 +5,7 @@
 
 
 				<router-link to='#' @click.native='backprev()'>
-
-					<img src="../../assets/img/左箭头.svg" alt="">
+					<img src="../../assets/img/leftarrow.svg" alt="">
 				</router-link>
 			</div>
 			<div class='middle'>
