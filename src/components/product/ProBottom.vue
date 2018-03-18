@@ -1,5 +1,5 @@
 <template>
-  <div class='bottom'>
+  <div class='bottom' v-if='part_message'>
     <div class="left">
     	❤
     </div>
@@ -19,17 +19,36 @@ export default {
   name: 'ProBottom',
   props:['part_message'],
   updated(){
-  	
+  	//console.log(this.part_message)
   },
   methods:{
   	addshop(){
-		Toast({
-	 		message: '添加成功',
-	  		position: 'middle',
-	  		duration: 3000
-		});
-		this.$store.dispatch('addshopA',this.part_message)
-		console.log(this.$store.state.buyshops)
+  		axios.post('/shopcar',{
+  			brand   :   this.part_message.brand,
+  			images  :   this.part_message.image[0],
+  			name    :   this.part_message.name,
+  			origin_sale_price:this.part_message.market_price,
+  			product_id: this.part_message.id,
+  			sale_price: this.part_message.sale_price,
+  			specification_name:"伪数据S",
+  			spu : this.part_message.spu
+  		})
+  			 .then( (res)=>{
+  			 	// console.log(res)
+  			 	if( res.data.status ==1 ){
+  			 		Toast({
+				 		message: res.data.message,
+				  		position: 'middle',
+				  		duration: 3000
+					});
+  			 	}else if(res.data.status ==-111){
+  			 		Toast({
+				 		message: res.data.message,
+				  		position: 'middle',
+				  		duration: 3000
+					});
+  			 	}
+  			 })
   	}
   }
 }

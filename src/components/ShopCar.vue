@@ -105,6 +105,10 @@ export default {
   	}
   },
   updated(){
+  	if(this.money !=0 ){
+  		$('.hasbot').eq(0).find(".right").removeClass('off')
+  		$('.hasbot').eq(0).find(".right").addClass('on')
+  	}
   },
   mounted(){
   	axios.get('/shopcar/findshop')
@@ -124,7 +128,10 @@ export default {
 </script>
 
 <style scoped>
-
+	.hasbot .right.on{
+		background: rgb(245, 53, 155);
+		color: #fff;
+	}
 	.hasbot .right.off{
 		border: 1px solid #d3d3d3;
 		background: #d3d3d3;
